@@ -20,6 +20,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+    //2023 tokat 
     @Provides
     @Singleton
     fun ptovideDatabase(@ApplicationContext context: Context) = Room.databaseBuilder(
