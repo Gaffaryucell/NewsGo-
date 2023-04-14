@@ -17,6 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 
+//this is maby last
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
