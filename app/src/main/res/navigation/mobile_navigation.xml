@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.gaffaryucel.news.view.NewsFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_news" >
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_nav_home_to_detailsFragment2"
+            app:destination="@id/detailsFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_saved"
+        android:name="com.gaffaryucel.news.view.SavedNewsFragment"
+        android:label="Saved News"
+        tools:layout="@layout/fragment_saved_news" >
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_nav_gallery_to_savedNewsDetailsFragment"
+            app:destination="@id/savedNewsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment2"
+        android:name="com.gaffaryucel.news.view.DetailsFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedNewsDetailsFragment"
+        android:name="com.gaffaryucel.news.view.SavedNewsDetailsFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_saved_news_details" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_exit"
+        android:name="com.gaffaryucel.news.view.ZexitFragment"
+        android:label="fragment_zexit"
+        tools:layout="@layout/fragment_zexit" />
+
+</navigation>
